@@ -42,28 +42,18 @@ namespace NiceLabelDemo1
             {
                 try
                 {
-                    if (order.Description.Equals("Printers"))
+               
+                    switch(order.Description)
                     {
-                      var x = CreateRequestPrinters("https://labelcloudapi.onnicelabel.com/Trigger/v1/CloudTrigger/Api-CloudIntegrationDemo-Printers", subKey);
-
-                    }
-                    else
-                    {
-                        if (order.Description.Equals("Labels"))
-                        {
-                            var x = CreateRequestLabels("https://labelcloudapi.onnicelabel.com/Trigger/v1/CloudTrigger/Api-CloudIntegrationDemo-LabelCatalog", subKey);
-
-                        }
-                        else
-                        {
-                            if (order.Description.Equals("Label variables"))
-                            {
-                                //    var x = CreateRequestVar("https://labelcloudapi.onnicelabel.com/Trigger/v1/CloudTrigger/Api-CloudIntegrationDemo-Variables", subKey);
-                                //   order.Description = x;
-
-
-                            }
-                        }
+                        case "Printers":
+                            var x = CreateRequestPrinters("https://labelcloudapi.onnicelabel.com/Trigger/v1/CloudTrigger/Api-CloudIntegrationDemo-Printers", subKey);
+                            break;
+                        case "Labels":
+                            var y = CreateRequestLabels("https://labelcloudapi.onnicelabel.com/Trigger/v1/CloudTrigger/Api-CloudIntegrationDemo-LabelCatalog", subKey);
+                            break;
+                        case "Label variables":
+                         //   var z = CreateRequestVar("https://labelcloudapi.onnicelabel.com/Trigger/v1/CloudTrigger/Api-CloudIntegrationDemo-Variables", subKey);
+                            break;
                     }
 
 
@@ -121,21 +111,19 @@ namespace NiceLabelDemo1
 
 
                     JArray json = JArray.Parse(responseFromServer);
-
+                    NLLabelGraph labgraph = PXGraph.CreateInstance<NLLabelGraph>();
                     foreach (JObject z in json)
                     {
-                        NLLabelGraph labgraph = PXGraph.CreateInstance<NLLabelGraph>();
-                        NLLabelList lab = new NLLabelList();
-                                             
+                        labgraph.Clear();
+                        NLLabelList lab = new NLLabelList();                                             
 
                         lab.LabelName = (string)z["itemPath"];
                         lab.LabelPath = (string)z["itemPath"];
                         lab.Nlid = (int)z["id"];
 
                        // NLLabelList.Insert(lab);
-                      //  Actions.PressSave();
-                       labgraph.Clear();
-                      labgraph.assign(lab);
+                      //  Actions.PressSave();                     
+                        labgraph.assign(lab);
                     }
 
 
@@ -190,16 +178,16 @@ namespace NiceLabelDemo1
 
 
                     JArray json = JArray.Parse(responseFromServer);
-
+                    NLPrinterGraph ptrgraph = PXGraph.CreateInstance<NLPrinterGraph>();
                     foreach (JObject z in json)
                     {
-                        NLPrinterGraph ptrgraph = PXGraph.CreateInstance<NLPrinterGraph>();
+
+                        ptrgraph.Clear();
                         NLPrinters attNew = new NLPrinters();
 
                         attNew.PrinterName = (string)z["PrinterName"];
                        // attNew.Printcd = (string)z["DriverName"];
 
-                        ptrgraph.Clear();
                         ptrgraph.assign(attNew);
                     }
 
@@ -258,16 +246,16 @@ namespace NiceLabelDemo1
         //            JObject x = (JObject)json.GetValue("Variables");
 
         //            JArray y = (JArray)x.GetValue("Variable");
-
+        //attributesClass attgraph = PXGraph.CreateInstance<attributesClass>();
         //            foreach (JObject z in y)
         //            {
-        //                attributesClass attgraph = PXGraph.CreateInstance<attributesClass>();
+        //                   attgraph.Clear();
         //                attributes attNew = new attributes();
 
         //                attNew.Attributeid = "/de12-folder/Labelv1.nlbl";
         //                attNew.Nlkey = (string)z["Name"];
         //                attNew.AcuKey = (string)z["Name"];
-        //                attgraph.Clear();
+        //             
         //                attgraph.assign(attNew);
         //            }
 

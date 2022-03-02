@@ -4,7 +4,7 @@ using PX.Data.BQL.Fluent;
 
 namespace NiceLabelDemo1
 {
-  public class NLSubKeyGraph : PXGraph<NLSubKeyGraph, NLSubscriptionKey>
+  public class NLSubKeyGraph : PXGraph<NLSubKeyGraph>
   {
     public SelectFrom<NLSubscriptionKey>.View subskey;
   

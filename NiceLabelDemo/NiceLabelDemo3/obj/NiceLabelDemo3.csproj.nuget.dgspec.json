@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\cases\\21r200\\App_Data\\Projects\\NiceLabelDemo3\\NiceLabelDemo3\\NiceLabelDemo3.csproj": {}
+    "C:\\Users\\varthini.bhaskaran\\Desktop\\NiceLabelIntegration\\NiceLabelDemo\\NiceLabelDemo3\\NiceLabelDemo3.csproj": {}
   },
   "projects": {
-    "C:\\cases\\21r200\\App_Data\\Projects\\NiceLabelDemo3\\NiceLabelDemo3\\NiceLabelDemo3.csproj": {
+    "C:\\Users\\varthini.bhaskaran\\Desktop\\NiceLabelIntegration\\NiceLabelDemo\\NiceLabelDemo3\\NiceLabelDemo3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\cases\\21r200\\App_Data\\Projects\\NiceLabelDemo3\\NiceLabelDemo3\\NiceLabelDemo3.csproj",
+        "projectUniqueName": "C:\\Users\\varthini.bhaskaran\\Desktop\\NiceLabelIntegration\\NiceLabelDemo\\NiceLabelDemo3\\NiceLabelDemo3.csproj",
         "projectName": "NiceLabelDemo3",
-        "projectPath": "C:\\cases\\21r200\\App_Data\\Projects\\NiceLabelDemo3\\NiceLabelDemo3\\NiceLabelDemo3.csproj",
+        "projectPath": "C:\\Users\\varthini.bhaskaran\\Desktop\\NiceLabelIntegration\\NiceLabelDemo\\NiceLabelDemo3\\NiceLabelDemo3.csproj",
         "packagesPath": "C:\\Users\\varthini.bhaskaran\\.nuget\\packages\\",
-        "outputPath": "C:\\cases\\21r200\\App_Data\\Projects\\NiceLabelDemo3\\NiceLabelDemo3\\obj\\",
+        "outputPath": "C:\\Users\\varthini.bhaskaran\\Desktop\\NiceLabelIntegration\\NiceLabelDemo\\NiceLabelDemo3\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [

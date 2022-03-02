@@ -5863,39 +5863,5 @@
             Chech if type is numeric type.
             </summary>
         </member>
-        <member name="M:Microsoft.Extensions.Logging.LoggerExtensions.BeginPropertyScope(Microsoft.Extensions.Logging.ILogger,System.String,System.Object)">
-            <summary>
-            This is intended to mimic Serilog's <c>LogContext.PushProperty</c> behavior
-            by introducing a scope which state is a single property holder.
-            </summary>
-            <param name="logger">The <see cref="T:Microsoft.Extensions.Logging.ILogger"/> to create the scope in.</param>
-            <param name="name">The name of the property.</param>
-            <param name="value">The value of the property.</param>
-            <returns>An <see cref="T:System.IDisposable" /> that ends the logical operation scope on dispose.</returns>
-            <seealso cref="M:Microsoft.Extensions.Logging.ILogger.BeginScope``1(``0)">ILogger.BeginScope&lt;TState&gt;(TState state)</seealso>
-            <remarks>
-            This is how Serilog default implementation for Microsoft.Extensions.Logging behaves:
-            scopes are converted into a single <c>LogEvent</c> property called <c>Scope</c>,
-            which contains a sequence of the logical scopes, in order of their adding:
-            <code>
-            "Scope": [
-              {
-                "OutermostScopeProperty1": "SomeValue"
-              },
-              {
-                "InnermostScopeProperty1": "SomeValue",
-                "InnermostScopeProperty2": "SomeValue"
-              }
-            ]
-            </code>
-            which is decent for all-around use, but still too complicated.
-            <code>logger.BeginPropertyScope("property", "value")</code>
-            will simply produce
-            <code>
-            "property": "value"
-            </code>
-            which is much nicer for our cases.
-            </remarks>
-        </member>
     </members>
 </doc>

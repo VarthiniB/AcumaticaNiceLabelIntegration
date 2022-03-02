@@ -134,23 +134,6 @@
         <member name="M:PX.Data.BQL.Fluent.PXViewOf`1.BasedOn`1.WithDragAndDrop`2.#ctor(PX.Data.PXGraph,System.Delegate)">
             <exclude />
         </member>
-        <member name="T:PX.Data.BQL.Fluent.PXViewOf`1.BasedOn`1.WithDragAndDrop`2.WithOwnActions">
-            <summary>
-            The class that dynamically generates command names based on TSortedTable
-            </summary>
-        </member>
-        <member name="M:PX.Data.BQL.Fluent.PXViewOf`1.BasedOn`1.WithDragAndDrop`2.WithOwnActions.#ctor(PX.Data.PXGraph)">
-            <exclude />
-        </member>
-        <member name="M:PX.Data.BQL.Fluent.PXViewOf`1.BasedOn`1.WithDragAndDrop`2.WithOwnActions.#ctor(PX.Data.PXGraph,System.Delegate)">
-            <exclude />
-        </member>
-        <member name="F:PX.Data.BQL.Fluent.PXViewOf`1.BasedOn`1.WithDragAndDrop`2.WithOwnActions.PasteLineCommand">
-            <exclude />
-        </member>
-        <member name="F:PX.Data.BQL.Fluent.PXViewOf`1.BasedOn`1.WithDragAndDrop`2.WithOwnActions.ResetOrderCommand">
-            <exclude />
-        </member>
         <member name="T:PX.Data.BQL.Fluent.PXViewOf`1.BasedOn`1.ReadOnly">
             <summary>
             Enforce readonly-mode for current view

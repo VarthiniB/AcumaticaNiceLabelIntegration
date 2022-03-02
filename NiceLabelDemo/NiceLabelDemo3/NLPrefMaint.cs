@@ -4,7 +4,7 @@ using PX.Data.BQL.Fluent;
 
 namespace NiceLabelDemo1
 {
-  public class NLPrefMaint : PXGraph<NLPrefMaint, NLClassLabelPref>
+  public class NLPrefMaint : PXGraph<NLPrefMaint>
   {
 
     public PXSave<NLClassLabelPref> Save;
@@ -23,6 +23,7 @@ namespace NiceLabelDemo1
     protected void addSubscriptionKey()
     {
 
+
             try
             {
                 NLSubKeyGraph keygraph = PXGraph.CreateInstance<NLSubKeyGraph>();
@@ -32,9 +33,9 @@ namespace NiceLabelDemo1
                 keygraph.subskey.Insert(key);
                 keygraph.Save.Press();
             }
-            catch(Exception e)
+            catch
             {
-                
+                throw new PXException();   
             }
 
 

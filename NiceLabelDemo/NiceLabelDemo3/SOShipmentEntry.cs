@@ -7,6 +7,7 @@ using NiceLabelDemo1;
 
 namespace PX.Objects.SO
 {
+    // Acuminator disable once PX1016 ExtensionDoesNotDeclareIsActiveMethod extension should be constantly active
     public class SOShipmentEntry_Extension : PXGraphExtension<SOShipmentEntry>
   {
     #region Event Handlers
