@@ -6,7 +6,7 @@ using System.Net;
 using System.Text;
 using Newtonsoft.Json.Linq;
 
-namespace NiceLabelDemo1
+namespace NiceLabelDemo
 {
     public class NLSyncProcess : PXGraph<NLSyncProcess>
   {

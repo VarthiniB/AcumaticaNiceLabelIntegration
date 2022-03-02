@@ -1,7 +1,7 @@
 using System;
 using PX.Data;
 
-namespace NiceLabelDemo1
+namespace NiceLabelDemo
 {
   [Serializable]
   [PXCacheName("NLLabelAttributes")]

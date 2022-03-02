@@ -3,7 +3,7 @@ using System.Net;
 using System.IO;
 using System.Text;
 using PX.Data;
-using NiceLabelDemo1;
+using NiceLabelDemo;
 
 namespace PX.Objects.SO
 {

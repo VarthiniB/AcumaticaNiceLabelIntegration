@@ -3,12 +3,13 @@ using PX.Data;
 using PX.Objects.AR;
 using PX.Data.BQL.Fluent;
 
-namespace NiceLabelDemo1
+namespace NiceLabelDemo
 {
   //[Serializable]
   [PXCacheName("NLClassLabelPref")]
   public class NLClassLabelPref : IBqlTable
   {
+
     #region ClassLabelID
     [PXDBIdentity()]
     public virtual int? ClassLabelID { get; set; }

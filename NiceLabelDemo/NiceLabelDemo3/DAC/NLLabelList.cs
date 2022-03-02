@@ -15,7 +15,7 @@ using PX.Objects.EP;
 using PX.Objects.DR;
 using PX.Objects.CR;
 
-namespace NiceLabelDemo1
+namespace NiceLabelDemo
 {
  // [Serializable]
   [PXCacheName("NLLabelList")]
