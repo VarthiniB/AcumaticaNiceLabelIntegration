@@ -22,29 +22,12 @@ namespace NiceLabelDemo1
     [PXUIField(DisplayName = "Add Subscription Key", MapEnableRights = PXCacheRights.Select, MapViewRights = PXCacheRights.Select)]
     protected void addSubscriptionKey()
     {
-
-
-            try
-            {
                 NLSubKeyGraph keygraph = PXGraph.CreateInstance<NLSubKeyGraph>();
                 NLSubscriptionKey key = new NLSubscriptionKey();
                 key.SubscriptionKey = this.ClassLabelPref.Current.SubscriptionKey;
-
                 keygraph.subskey.Insert(key);
-                keygraph.Save.Press();
-            }
-            catch
-            {
-                throw new PXException();   
-            }
-
-
-  
+                keygraph.Save.Press();    
 
     }
-
-    
-
-
   }
 }
