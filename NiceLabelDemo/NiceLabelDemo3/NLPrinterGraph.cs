@@ -2,7 +2,7 @@ using System;
 using PX.Data;
 using PX.Data.BQL.Fluent;
 
-namespace NiceLabelDemo1
+namespace NiceLabelDemo
 {
   public class NLPrinterGraph : PXGraph<NLPrinterGraph, NLPrinters>
   {

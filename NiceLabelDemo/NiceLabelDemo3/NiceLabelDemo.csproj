@@ -6,8 +6,8 @@
     <ProjectGuid>{9BC6D61A-5D4B-4D57-BC6B-5E3F9D04377E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NiceLabelDemo3</RootNamespace>
-    <AssemblyName>NiceLabelDemo3</AssemblyName>
+    <RootNamespace>NiceLabelDemo</RootNamespace>
+    <AssemblyName>NiceLabelDemo</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
