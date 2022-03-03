@@ -98,7 +98,7 @@ namespace NiceLabelDemo
                     foreach (JObject z in json)
                     {
                         labgraph.Clear();
-                        NLLabelList lab = new NLLabelList();                                             
+                        NLLabel lab = new NLLabel();                                             
 
                         lab.LabelName = (string)z["itemPath"];
                         lab.LabelPath = (string)z["itemPath"];
@@ -160,7 +160,7 @@ namespace NiceLabelDemo
                     {
 
                         ptrgraph.Clear();
-                        NLPrinters attNew = new NLPrinters();
+                        NLPrinter attNew = new NLPrinter();
 
                         attNew.PrinterName = (string)z["PrinterName"];
                         ptrgraph.assign(attNew);

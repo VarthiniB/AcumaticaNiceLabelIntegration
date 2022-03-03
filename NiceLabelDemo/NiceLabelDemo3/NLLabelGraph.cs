@@ -4,15 +4,15 @@ using PX.Data.BQL.Fluent;
 
 namespace NiceLabelDemo
 {
-  public class NLLabelGraph : PXGraph<NLLabelGraph, NLLabelList>
+  public class NLLabelGraph : PXGraph<NLLabelGraph, NLLabel>
   {
     
-    public SelectFrom<NLLabelList>.View labels;
+    public SelectFrom<NLLabel>.View labels;
     
     #region Event Handlers
-    public void assign(NLLabelList order)
+    public void assign(NLLabel order)
         {
-            NLLabelList labellist = new NLLabelList();
+            NLLabel labellist = new NLLabel();
             labellist.Nlid = order.Nlid;
             labellist.LabelName = order.LabelName;
             labellist.LabelPath = order.LabelPath;

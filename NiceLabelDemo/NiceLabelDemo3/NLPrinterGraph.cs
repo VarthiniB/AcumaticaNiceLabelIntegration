@@ -4,16 +4,16 @@ using PX.Data.BQL.Fluent;
 
 namespace NiceLabelDemo
 {
-  public class NLPrinterGraph : PXGraph<NLPrinterGraph, NLPrinters>
+  public class NLPrinterGraph : PXGraph<NLPrinterGraph, NLPrinter>
   {
     
-    public SelectFrom<NLPrinters>.View ptr;
+    public SelectFrom<NLPrinter>.View ptr;
   
     #region Event Handlers
-    public void assign(NLPrinters order)
+    public void assign(NLPrinter order)
         {
             
-            NLPrinters ptrs = new NLPrinters();
+            NLPrinter ptrs = new NLPrinter();
             ptrs.PrinterName = order.PrinterName;
             ptrs.IsActive = true;
            

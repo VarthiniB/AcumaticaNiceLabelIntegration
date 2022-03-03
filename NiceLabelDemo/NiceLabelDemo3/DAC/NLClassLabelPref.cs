@@ -33,7 +33,7 @@ namespace NiceLabelDemo
     #region LabelName
     [PXDBString(50, IsUnicode = true, InputMask = "")]
     [PXUIField(DisplayName = "Default Label")]
-    [PXSelector(typeof(NLLabelList.labelName))]  
+    [PXSelector(typeof(NLLabel.labelName))]  
     public virtual string LabelName { get; set; }
     public abstract class labelName : PX.Data.BQL.BqlString.Field<labelName> { }
     #endregion
@@ -48,7 +48,7 @@ namespace NiceLabelDemo
     #region PrinterName
     [PXDBString(50, IsUnicode = true, InputMask = "")]
     [PXUIField(DisplayName = "Default Printer")]
-    [PXSelector(typeof(NLPrinters.printerName))]  
+    [PXSelector(typeof(NLPrinter.printerName))]  
     public virtual string PrinterName { get; set; }
     public abstract class printerName : PX.Data.BQL.BqlString.Field<printerName> { }
     #endregion
