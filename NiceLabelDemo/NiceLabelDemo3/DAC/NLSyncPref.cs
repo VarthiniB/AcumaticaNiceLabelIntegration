@@ -3,7 +3,7 @@ using PX.Data;
 
 namespace NiceLabelDemo
 {
- // [Serializable]
+
   [PXCacheName("NLSyncPref")]
   public class NLSyncPref : IBqlTable
   {

@@ -17,7 +17,6 @@ using PX.Objects.CR;
 
 namespace NiceLabelDemo
 {
-  //[Serializable]
   [PXCacheName("NLPrinters")]
   public class NLPrinters : IBqlTable
   {

@@ -11,10 +11,5 @@ namespace NiceLabelDemo
     public PXSave<NLSubscriptionKey> Save;
     public PXCancel<NLSubscriptionKey> Cancel;
     
-    
-    #region Event Handlers
-    
-    
-    #endregion
   }
 }
