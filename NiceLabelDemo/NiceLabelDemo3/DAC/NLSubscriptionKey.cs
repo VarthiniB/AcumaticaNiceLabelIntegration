@@ -17,7 +17,7 @@ using PX.Objects.CR;
 
 namespace NiceLabelDemo
 {
- // [Serializable]
+
   [PXCacheName("NLSubscriptionKey")]
   public class NLSubscriptionKey : IBqlTable
   {

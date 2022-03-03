@@ -7,7 +7,6 @@ using NiceLabelDemo;
 
 namespace PX.Objects.SO
 {
-    // Acuminator disable once PX1016 ExtensionDoesNotDeclareIsActiveMethod extension should be constantly active
     public class SOShipmentEntry_Extension : PXGraphExtension<SOShipmentEntry>
   {
     #region Event Handlers
@@ -21,19 +20,12 @@ namespace PX.Objects.SO
             var customer = Base.customer;
             var cclass = customer.Current.CustomerClassID;
 
-            //assignLabels labelsView = PXGraph.CreateInstance<assignLabels>();
-
-            //List<string> labelsString = new List<string>();
-
             NLClassLabelPref lab = new NLClassLabelPref();
-           // PXSelect<InventoryItem, Where<InventoryItem.inventoryCD, Equal<Required<InventoryItem.inventoryCD>>>>.Select(Base, ObjPackageItems.product_sku);
-           // InventoryItem inventory = PXSelect<InventoryItem, Where<InventoryItem.noteID, Equal<Required<InventoryItem.noteID>>>>.Select(this, status?.LocalID);
-
+           
             lab = PXSelect<NLClassLabelPref, Where<NLClassLabelPref.customerClassID, Equal<Required<NLClassLabelPref.customerClassID>>>>.Select(Base, Base.customer.Current.CustomerClassID);
 
             NLSubscriptionKey skey = new NLSubscriptionKey();
 
-           // skey = PXSelect<NLSubscriptionKey, Where<NLSubscriptionKey.createdByID, Equal<Required<NLSubscriptionKey.createdByID>>>>.SelectWindowed(Base, 0, 1, Base.Accessinfo.UserID);
             skey = PXSelect<NLSubscriptionKey,
                 Where<NLSubscriptionKey.createdByID, Equal<Required<NLSubscriptionKey.createdByID>>>,
                 OrderBy<Desc<NLSubscriptionKey.lastModifiedDateTime>>>.SelectWindowed(Base, 0, 1, Base.Accessinfo.UserID);
@@ -54,26 +46,8 @@ namespace PX.Objects.SO
                 req.Method = "POST";
                 string postData = "";
 
-
-               // postData = "{    \"FilePath\": \"/demoFinal/"+""+ labelid.Trim() +""+".nlbl"+ "\",    \"FileVersion\": \"\",   \"Quantity\": \"1\",  \"Printer\": \"ZEBRA 105SL 203DPI-VAR\", \"PrinterSettings\": \"\",  \"Variables\": [   {   \"address\": \"" + add + "\" }  ]};";
-
                 postData = "{    \"FilePath\": \""+ labelid+"\",    \"FileVersion\": \"\",   \"Quantity\": \"1\",  \"Printer\": \"ZEBRA 105SL 203DPI-VAR\", \"PrinterSettings\": \"\",  \"Variables\": [   {   \"address\": \"" + add + "\" }  ]};";
 
-
-
-
-            /*    if (cclass.Equals("INTL")) {
-                    postData = "{    \"FilePath\": \"/demoFinal/LabelInternational.nlbl\",    \"FileVersion\": \"\",   \"Quantity\": \"1\",  \"Printer\": \"ZEBRA 105SL 203DPI-VAR\", \"PrinterSettings\": \"\",  \"Variables\": [   {   \"address\": \""+add+"\" }  ]};";
-                }
-                else if (cclass.Equals("DEFAULT")){ 
-                    postData = "{    \"FilePath\": \"/demoFinal/labelDefault.nlbl\",    \"FileVersion\": \"\",   \"Quantity\": \"1\",  \"Printer\": \"ZEBRA 105SL 203DPI-VAR\", \"PrinterSettings\": \"\",  \"Variables\": [   {   \"address\": \"" + add+"\",         \"qty\": \"1\"  }  ]};";
-                }
-                else if(cclass.Equals("INTLEU"))
-                {
-                    //WFAN Radio, 1188-1210, Wellstock Street, London
-
-                    postData = "{    \"FilePath\": \"/demoFinal/labeleu.nlbl\",    \"FileVersion\": \"\",   \"Quantity\": \"1\",  \"Printer\": \"ZEBRA 105SL 203DPI-VAR\", \"PrinterSettings\": \"\",  \"Variables\": [   {   \"add\": \""+add+"\",      \"via\": \"NA\"    }  ]};";
-                } */
                 byte[] byteArray = Encoding.UTF8.GetBytes(postData);
 
                 // Set the ContentType property of the WebRequest.
@@ -112,8 +86,6 @@ namespace PX.Objects.SO
                 throw (new ArgumentException("Invalid URL provided.", "url"));
             }
         }  
-
-
 
     #endregion
   }

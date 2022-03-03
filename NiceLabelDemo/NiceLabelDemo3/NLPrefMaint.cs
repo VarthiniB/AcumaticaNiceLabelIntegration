@@ -9,13 +9,8 @@ namespace NiceLabelDemo
 
     public PXSave<NLClassLabelPref> Save;
     public PXCancel<NLClassLabelPref> Cancel;
-
-   
     
     public SelectFrom<NLClassLabelPref>.View ClassLabelPref;
-   // public PXSelect<NLSubscriptionKey> SubscriptionKey;
-    
-    
     
     public PXAction<NLClassLabelPref> AddSubscriptionKey;
     [PXButton(CommitChanges = true)]

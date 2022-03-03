@@ -5,7 +5,6 @@ using PX.Data.BQL.Fluent;
 
 namespace NiceLabelDemo
 {
-  //[Serializable]
   [PXCacheName("NLClassLabelPref")]
   public class NLClassLabelPref : IBqlTable
   {

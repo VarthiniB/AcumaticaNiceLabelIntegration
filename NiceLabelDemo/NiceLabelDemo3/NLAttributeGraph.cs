@@ -10,8 +10,6 @@ namespace NiceLabelDemo
     #region Event Handlers
     public void assign(NLLabelAttributes order)
      {
-
-
             //Modify the number of assigned orders for the employee.
             NLLabelAttributes atts = new NLLabelAttributes();            
             atts.NLAttributeName = order.NLAttributeName;

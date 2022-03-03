@@ -17,7 +17,6 @@ using PX.Objects.CR;
 
 namespace NiceLabelDemo
 {
- // [Serializable]
   [PXCacheName("NLLabelList")]
   public class NLLabelList : IBqlTable
   {
