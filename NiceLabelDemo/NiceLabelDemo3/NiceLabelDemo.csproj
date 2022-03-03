@@ -67,10 +67,10 @@
     <Compile Include="DAC\NLClassLabelPref.cs" />
     <Compile Include="DAC\NLLabelAttributes.cs" />
     <Compile Include="NLLabelGraph.cs" />
-    <Compile Include="DAC\NLLabelList.cs" />
+    <Compile Include="DAC\NLLabel.cs" />
     <Compile Include="NLPrefMaint.cs" />
     <Compile Include="NLPrinterGraph.cs" />
-    <Compile Include="DAC\NLPrinters.cs" />
+    <Compile Include="DAC\NLPrinter.cs" />
     <Compile Include="NLSubKeyGraph.cs" />
     <Compile Include="DAC\NLSubscriptionKey.cs" />
     <Compile Include="DAC\NLSyncPref.cs" />

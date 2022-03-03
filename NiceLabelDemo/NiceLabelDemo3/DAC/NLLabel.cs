@@ -17,35 +17,48 @@ using PX.Objects.CR;
 
 namespace NiceLabelDemo
 {
-  [PXCacheName("NLPrinters")]
-  public class NLPrinters : IBqlTable
+  [PXCacheName("NLLabelList")]
+  public class NLLabel : IBqlTable
   {
-    
-    
-    public class PK : PrimaryKeyOf<NLPrinters>.By<printerID>
+    public class PK : PrimaryKeyOf<NLLabel>.By<labelID>
     {
-      public static NLPrinters Find(PXGraph graph, int? printerID) => FindBy(graph, printerID);
+      public static NLLabel Find(PXGraph graph, int? labelID) => FindBy(graph, labelID);
     
     }
     
-    #region PrinterID
+    
+    #region LabelID
     [PXDBIdentity(IsKey = true)]
-    public virtual int? PrinterID { get; set; }
-    public abstract class printerID : PX.Data.BQL.BqlInt.Field<printerID> { }
+    public virtual int? LabelID { get; set; }
+    public abstract class labelID : PX.Data.BQL.BqlInt.Field<labelID> { }
     #endregion
 
-    #region PrinterName
-    [PXDBString(50, IsUnicode = true, InputMask = "")]
-    [PXUIField(DisplayName = "Printer Name")]
-    public virtual string PrinterName { get; set; }
-    public abstract class printerName : PX.Data.BQL.BqlString.Field<printerName> { }
+    #region Nlid
+    [PXDBInt()]
+    [PXUIField(DisplayName = "Nlid")]
+    public virtual int? Nlid { get; set; }
+    public abstract class nlid : PX.Data.BQL.BqlInt.Field<nlid> { }
     #endregion
 
-    #region DriverName
+    #region LabelName
     [PXDBString(50, IsUnicode = true, InputMask = "")]
-    [PXUIField(DisplayName = "Driver Name")]
-    public virtual string DriverName { get; set; }
-    public abstract class driverName : PX.Data.BQL.BqlString.Field<driverName> { }
+    [PXUIField(DisplayName = "Label Name")]
+    public virtual string LabelName { get; set; }
+    public abstract class labelName : PX.Data.BQL.BqlString.Field<labelName> { }
+    #endregion
+
+    #region LabelPath
+    [PXDBString(100, IsUnicode = true, InputMask = "")]
+    [PXUIField(DisplayName = "Label Path")]
+    public virtual string LabelPath { get; set; }
+    public abstract class labelPath : PX.Data.BQL.BqlString.Field<labelPath> { }
+    #endregion
+
+    #region VersionNbr
+    [PXDBInt()]
+    [PXUIField(DisplayName = "Version Nbr")]
+    public virtual int? VersionNbr { get; set; }
+    public abstract class versionNbr : PX.Data.BQL.BqlInt.Field<versionNbr> { }
     #endregion
 
     #region IsActive
