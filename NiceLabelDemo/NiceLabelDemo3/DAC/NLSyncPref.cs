@@ -26,13 +26,6 @@ namespace NiceLabelDemo
     public virtual bool? IsActive { get; set; }
     public abstract class isActive : PX.Data.BQL.BqlBool.Field<isActive> { }
     #endregion
-
-    #region Selected
-    public abstract class selected : PX.Data.BQL.BqlBool.Field<selected> { }
-    [PXBool]
-    [PXUIField(DisplayName = "Selected")]
-    public virtual bool? Selected { get; set; }
-    #endregion  
       
     #region CreatedDateTime
     [PXDBCreatedDateTime()]
