@@ -4,14 +4,14 @@ using PX.Data.BQL.Fluent;
 
 namespace NiceLabelDemo
 {
-  public class NLAttributeGraph : PXGraph<NLAttributeGraph, NLLabelAttributes>
+  public class NLAttributeGraph : PXGraph<NLAttributeGraph, NLAttributes>
   {
-    public SelectFrom<NLLabelAttributes>.View att;
+    public SelectFrom<NLAttributes>.View att;
     #region Event Handlers
-    public void assign(NLLabelAttributes order)
+    public void assign(NLAttributes order)
      {
             //Modify the number of assigned orders for the employee.
-            NLLabelAttributes atts = new NLLabelAttributes();            
+            NLAttributes atts = new NLAttributes();            
             atts.NLAttributeName = order.NLAttributeName;
           
             atts.AttributeID = order.AttributeID;

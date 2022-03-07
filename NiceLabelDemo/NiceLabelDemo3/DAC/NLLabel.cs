@@ -26,6 +26,7 @@ namespace NiceLabelDemo
     
     }
     
+
     
     #region LabelID
     [PXDBIdentity(IsKey = true)]
