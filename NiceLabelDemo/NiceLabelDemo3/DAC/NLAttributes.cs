@@ -5,7 +5,7 @@ namespace NiceLabelDemo
 {
   [Serializable]
   [PXCacheName("NLLabelAttributes")]
-  public class NLLabelAttributes : IBqlTable
+  public class NLAttributes : IBqlTable
   {
     #region AttributeID
     [PXDBIdentity(IsKey = true)]
