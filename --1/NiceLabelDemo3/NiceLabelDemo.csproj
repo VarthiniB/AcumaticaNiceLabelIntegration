@@ -65,7 +65,7 @@
   <ItemGroup>
     <Compile Include="NLAttributeGraph.cs" />
     <Compile Include="DAC\NLClassLabelPref.cs" />
-    <Compile Include="DAC\NLLabelAttributes.cs" />
+    <Compile Include="DAC\NLAttributes.cs" />
     <Compile Include="NLLabelGraph.cs" />
     <Compile Include="DAC\NLLabel.cs" />
     <Compile Include="NLPrefMaint.cs" />
