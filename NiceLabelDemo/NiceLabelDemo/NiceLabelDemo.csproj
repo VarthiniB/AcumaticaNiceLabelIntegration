@@ -72,7 +72,7 @@
     <Compile Include="DAC\NLSubscriptionKey.cs" />
     <Compile Include="DAC\NLSyncPref.cs" />
     <Compile Include="NLSyncProcess.cs" />
-    <Compile Include="SOShipmentEntry.cs" />
+    <Compile Include="NLSOShipmentEntry.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
