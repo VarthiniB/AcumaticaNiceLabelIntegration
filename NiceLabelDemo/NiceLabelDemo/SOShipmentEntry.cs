@@ -21,14 +21,9 @@ namespace PX.Objects.SO
             var customer = Base.customer;
             var cclass = customer.Current.CustomerClassID;
 
-            NLClassLabelPref lab = new NLClassLabelPref();
-          
-            lab = PXSelect<NLClassLabelPref, Where<NLClassLabelPref.customerClassID, Equal<Required<NLClassLabelPref.customerClassID>>>>.Select(Base, Base.customer.Current.CustomerClassID);
+            NLClassLabelPref lab = PXSelect<NLClassLabelPref, Where<NLClassLabelPref.customerClassID, Equal<Required<NLClassLabelPref.customerClassID>>>>.Select(Base, Base.customer.Current.CustomerClassID);
 
-            NLSubscriptionKey skey = new NLSubscriptionKey();
-
-           // skey = PXSelect<NLSubscriptionKey, Where<NLSubscriptionKey.createdByID, Equal<Required<NLSubscriptionKey.createdByID>>>>.SelectWindowed(Base, 0, 1, Base.Accessinfo.UserID);
-            skey = PXSelect<NLSubscriptionKey,
+            NLSubscriptionKey skey = PXSelect<NLSubscriptionKey,
                 Where<NLSubscriptionKey.createdByID, Equal<Required<NLSubscriptionKey.createdByID>>>,
                 OrderBy<Desc<NLSubscriptionKey.lastModifiedDateTime>>>.SelectWindowed(Base, 0, 1, Base.Accessinfo.UserID);
 
