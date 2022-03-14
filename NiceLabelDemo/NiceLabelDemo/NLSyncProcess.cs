@@ -21,24 +21,18 @@ namespace NiceLabelDemo
 
         NLSyncPref syncobj = new NLSyncPref();
         syncobj.Description = "Labels";
-        syncobj.IsActive = true;
         res.Add(new PXResult<NLSyncPref>(syncobj));
         NLSyncPref syncobj1 = new NLSyncPref();
         syncobj1.Description = "Printers";
-        syncobj1.IsActive = true;
         res.Add(new PXResult<NLSyncPref>(syncobj1));
         NLSyncPref syncobj2 = new NLSyncPref();
         syncobj2.Description = "Label variables";
-        syncobj2.IsActive = true;
         res.Add(new PXResult<NLSyncPref>(syncobj2));
        return res;
     }
      public NLSyncProcess()
-     {
-            
-           SyncPrefs.SetProcessDelegate(AssignOrders);
-
-           
+     {            
+           SyncPrefs.SetProcessDelegate(AssignOrders);           
      }
 
         public static void AssignOrders(List<NLSyncPref> orders)

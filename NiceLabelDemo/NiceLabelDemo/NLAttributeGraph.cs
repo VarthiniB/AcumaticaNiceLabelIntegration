@@ -6,7 +6,7 @@ namespace NiceLabelDemo
 {
   public class NLAttributeGraph : PXGraph<NLAttributeGraph, NLLabelAttributes>
   {
-    public SelectFrom<NLLabelAttributes>.View att;
+    public SelectFrom<NLLabelAttributes>.View Att;
     #region Event Handlers
     public void assign(NLLabelAttributes order)
      {
@@ -16,7 +16,7 @@ namespace NiceLabelDemo
           
             atts.AttributeID = order.AttributeID;
 
-            att.Insert(atts);
+            Att.Insert(atts);
 
             // Trigger the Save action to save the changes to the database
             Actions.PressSave();

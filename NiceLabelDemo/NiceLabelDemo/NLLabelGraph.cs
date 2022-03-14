@@ -7,7 +7,7 @@ namespace NiceLabelDemo
   public class NLLabelGraph : PXGraph<NLLabelGraph, NLLabel>
   {
     
-    public SelectFrom<NLLabel>.View labels;
+    public SelectFrom<NLLabel>.View Labels;
     
     #region Event Handlers
     public void assign(NLLabel order)
@@ -18,7 +18,7 @@ namespace NiceLabelDemo
             labellist.LabelPath = order.LabelPath;
           
            
-            labels.Insert(labellist);
+            Labels.Insert(labellist);
 
             // Trigger the Save action to save the changes to the database
             Actions.PressSave();
