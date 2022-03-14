@@ -38,9 +38,8 @@ namespace NiceLabelDemo
         public static void AssignOrders(List<NLSyncPref> orders)
         {
             NLSyncProcess labgraph = PXGraph.CreateInstance<NLSyncProcess>();
-            NLSubscriptionKey skey = new NLSubscriptionKey();
-
-            skey = PXSelect<NLSubscriptionKey,
+           
+            NLSubscriptionKey skey = PXSelect<NLSubscriptionKey,
                 Where<NLSubscriptionKey.createdByID, Equal<Required<NLSubscriptionKey.createdByID>>>,
                 OrderBy<Desc<NLSubscriptionKey.lastModifiedDateTime>>>.SelectWindowed(labgraph, 0, 1, labgraph.Accessinfo.UserID);
 
