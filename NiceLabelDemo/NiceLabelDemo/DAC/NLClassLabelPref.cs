@@ -30,13 +30,7 @@ namespace NiceLabelDemo
     public abstract class labelID : PX.Data.BQL.BqlInt.Field<labelID> { }
     #endregion
 
-    #region PrinterID
-    [PXDBInt()]
-    [PXUIField(DisplayName = "Printer ID")]
-    public virtual int? PrinterID { get; set; }
-    public abstract class printerID : PX.Data.BQL.BqlInt.Field<printerID> { }
-    #endregion
-
+    
     #region PrinterName
     [PXDBString(50, IsUnicode = true, InputMask = "")]
     [PXUIField(DisplayName = "Default Printer")]
