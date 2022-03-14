@@ -45,20 +45,6 @@ namespace NiceLabelDemo
     public abstract class printerName : PX.Data.BQL.BqlString.Field<printerName> { }
     #endregion
 
-    #region SubscriptionKeyID
-    [PXDBInt()]
-    [PXUIField(DisplayName = "Subscription Key ID")]
-    public virtual int? SubscriptionKeyID { get; set; }
-    public abstract class subscriptionKeyID : PX.Data.BQL.BqlInt.Field<subscriptionKeyID> { }
-    #endregion
-
-    #region SubscriptionKey
-    [PXDBString(32, IsUnicode = true, InputMask = "")]
-    [PXUIField(DisplayName = "Subscription Key")]
-    public virtual string SubscriptionKey { get; set; }
-    public abstract class subscriptionKey : PX.Data.BQL.BqlString.Field<subscriptionKey> { }
-    #endregion
-
     #region CreatedDateTime
     [PXDBCreatedDateTime()]
     public virtual DateTime? CreatedDateTime { get; set; }
