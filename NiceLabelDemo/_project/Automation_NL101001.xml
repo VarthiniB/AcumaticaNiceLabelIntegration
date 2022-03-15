@@ -1,0 +1,18 @@
+﻿<Automation screen="NL101001">
+    <Actions ScreenID="NL101001">
+        <Action IsActive="True" ActionName="AddSubscriptionKey" ActionType="G" DisplayName="Add Subscription Key" Form="AddSubKey" IsTopLevel="True" WindowMode="S" IsLockedOnToolbar="False" Connotation="None">
+            <StateActionFields>
+                <StateActionField IsActive="True" FieldName="SubscriptionKey" ActionName="AddSubscriptionKey" IsFromScheme="False" Value="[AddSubKey.SubscriptionKey]" StateActionFieldLineNbr="1" />
+            </StateActionFields>
+            <StateActionParams />
+        </Action>
+        <Category IsActive="True" DisplayName="Actions" CategoryName="Action" LineNbr="0" />
+        <Category IsActive="True" DisplayName="Inquiries" CategoryName="Inquiry" LineNbr="1" />
+        <Category IsActive="True" DisplayName="Reports" CategoryName="Report" LineNbr="2" />
+    </Actions>
+    <Forms ScreenID="NL101001">
+        <Form IsActive="True" FormName="AddSubKey" DisplayName="Add Subscription Key" Columns="1" LineNbr="1">
+            <Field IsActive="True" FieldName="SubscriptionKey" DefaultValue="06bd55b255ea4c0fb7707cba155c5d41" DisplayName="Subscription Key" ControlSize="XM" SchemaField="NiceLabelDemo1.NLClassLabelPref.SubscriptionKey" ColumnSpan="32" FromScheme="True" LineNumber="1" />
+        </Form>
+    </Forms>
+</Automation>

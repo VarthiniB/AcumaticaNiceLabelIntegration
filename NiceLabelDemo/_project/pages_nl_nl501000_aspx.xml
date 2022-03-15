@@ -1,0 +1,5 @@
+﻿<Page path="~/Pages/NL/NL501000.aspx" pageSource="hZNfb9owFMWfqdTvYHnqK9BJnaYKqrWhHUgBRYXB3iYT34JVx05thz972GfftUPAGq2WJ+v4+vqcn296V99IxlZAUqZWFS76NPlEyZhZB8ZvPAmJ2p/OSbGdVFg3F7BtF0Gk5L5y+nEDyi2EgarsU2cqoGTOpODMwTO8VWBdn74waVFPND/0naQ33etut9tmtty1c0vJSK3BCGf71N/1qymgZCacP/FDOb/gwTUlV3eXFz3MUNub7Usgc2FcxWTG3Pq/xv1xbIC33yZaOUxARoM+zXF97X0GKZMsh6GWHIzfLNeDKSXPlWKYaApmg42wTatX7m6znwPm2FRXJofQiWMkU5fauhT9WbH0UWYB0kJwbxRDXtHLC3L4fJIJKzwikUPKliAHUOj2JJ3uVZ4ZnYO1UX1mRMHM3odDU6EEXuIC77DVS5iUS5a/JroomOI2xEe9884Gqv8k8qw7Eau7D9B9/hhdesRxRu67ETy0WOHijNrJRYM1BkeGIFZrLL++6ZY7SqavQvm6kXqrcCRxQqXUWz+mQ8GhGcSaSQobkCFwK3IS1HDrGIolmJhqXeup9hItq0IdTkfHa72+NllD/oqr5sX92+Jv5tUHjWZnsHP3UqwUisisSfskQHLPSULugB8Df8Gf4e7wNqerPnIQdRqAzY0ondDqRO/r+91wIuJkUUEAU5PrROh6Hu5U/Ibw9Ewoj2whFNdbSh4Vw4nnDYCxUNF7hfub04deuTf5wMxhbDtHIZpLb+ZsIv8C">
+    <PXDataSource ID="ds" ParentId="phDS_ds" TypeFullName="PX.Web.UI.PXDataSource">
+        <Prop Key="TypeName" Value="NiceLabelDemo.NLSyncProcess" />
+    </PXDataSource>
+</Page>
