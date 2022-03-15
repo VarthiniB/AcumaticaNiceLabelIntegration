@@ -63,7 +63,7 @@
     <Compile Include="Helper\NLWebCalls.cs" />
     <Compile Include="NLAttributeGraph.cs" />
     <Compile Include="DAC\NLClassLabelPref.cs" />
-    <Compile Include="DAC\NLLabelAttributes.cs" />
+    <Compile Include="DAC\NLLabelAttribute.cs" />
     <Compile Include="NLLabelGraph.cs" />
     <Compile Include="DAC\NLLabel.cs" />
     <Compile Include="NLPrefMaint.cs" />
@@ -74,6 +74,7 @@
     <Compile Include="DAC\NLSyncPref.cs" />
     <Compile Include="NLSyncProcess.cs" />
     <Compile Include="NLSOShipmentEntry.cs" />
+    <Compile Include="NLSetupMaint.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

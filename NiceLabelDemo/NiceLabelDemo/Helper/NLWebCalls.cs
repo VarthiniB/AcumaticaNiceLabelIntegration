@@ -134,9 +134,6 @@ namespace NiceLabelDemo.Helper
         {
             if (Uri.IsWellFormedUriString(url, UriKind.Absolute))
             {
-
-
-
                 WebRequest req = WebRequest.Create(url);
                 //req.Headers.Add("Ocp-Apim-Subscription-Key", "06bd55b255ea4c0fb7707cba155c5d41");
                 req.Headers.Add("Ocp-Apim-Subscription-Key", key);

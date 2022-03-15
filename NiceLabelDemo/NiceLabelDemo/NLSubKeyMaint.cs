@@ -9,10 +9,10 @@ namespace NiceLabelDemo
   {
     
     
-    public PXSave<NLSubscriptionKey> Save;
-    public PXCancel<NLSubscriptionKey> Cancel;  
+  //  public PXSave<NLSubscriptionKey> Save;
+  //  public PXCancel<NLSubscriptionKey> Cancel;  
     
-    public SelectFrom<NLSubscriptionKey>.View SubsKey;
+  //  public SelectFrom<NLSubscriptionKey>.View SubsKey;
 
   }
 }

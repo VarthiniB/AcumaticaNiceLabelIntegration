@@ -17,7 +17,6 @@ namespace NiceLabelDemo
     [PXBool]
     [PXUIField(DisplayName = "Selected")]
     public virtual bool? Selected { get; set; }
-    #endregion  
-   
-  }
+        #endregion
+    }
 }
