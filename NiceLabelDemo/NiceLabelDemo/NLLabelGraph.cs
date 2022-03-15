@@ -13,7 +13,7 @@ namespace NiceLabelDemo
     public void assign(NLLabel order)
         {
             NLLabel labellist = new NLLabel();
-            labellist.Nl_id = order.Nl_id;
+            labellist.LabelID = order.LabelID;
             labellist.LabelName = order.LabelName;
             labellist.LabelPath = order.LabelPath;
           

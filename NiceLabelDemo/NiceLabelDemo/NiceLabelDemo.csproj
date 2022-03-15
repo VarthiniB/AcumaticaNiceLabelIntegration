@@ -60,6 +60,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Helper\NLWebCalls.cs" />
     <Compile Include="NLAttributeGraph.cs" />
     <Compile Include="DAC\NLClassLabelPref.cs" />
     <Compile Include="DAC\NLLabelAttributes.cs" />
