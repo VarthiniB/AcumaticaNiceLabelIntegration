@@ -7,10 +7,8 @@ namespace NiceLabelDemo
   [PXCacheName("NLSyncPref")]
   public class NLSyncPref : IBqlTable
   {
-   
-
-    
-    [PXString(5, IsUnicode = true, InputMask = ">LLLLL")]
+       
+    [PXString(50, IsUnicode = true, IsKey = true)]
     public virtual String Description { get; set; }
 
 

@@ -26,6 +26,7 @@ namespace NiceLabelDemo
     #region LabelID
     [PXDBInt()]
     [PXUIField(DisplayName = "Label ID")]
+    [PXSelector(typeof(NLLabel.labelID), DescriptionField = typeof(NLLabel.labelName))]
     public virtual int? LabelID { get; set; }
     public abstract class labelID : PX.Data.BQL.BqlInt.Field<labelID> { }
     #endregion

@@ -34,12 +34,6 @@ namespace NiceLabelDemo
     public abstract class labelID : PX.Data.BQL.BqlInt.Field<labelID> { }
     #endregion
 
-    #region Nl_id
-    [PXDBInt()]
-    [PXUIField(DisplayName = "Nl_id")]
-    public virtual int? Nl_id { get; set; }
-    public abstract class nl_id : PX.Data.BQL.BqlInt.Field<nl_id> { }
-    #endregion
 
     #region LabelName
     [PXDBString(50, IsUnicode = true, InputMask = "")]
