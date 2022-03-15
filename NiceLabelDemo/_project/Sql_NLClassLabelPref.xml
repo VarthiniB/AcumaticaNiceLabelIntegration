@@ -1,0 +1,26 @@
+﻿<Sql TableName="NLClassLabelPref" TableSchemaXml="#CDATA">
+    <CDATA name="TableSchemaXml"><![CDATA[<table name="NLClassLabelPref">
+  <col name="ClassLabelID" type="Int" identity="true" />
+  <col name="CustomerClassID" type="NVarChar(10)" />
+  <col name="LabelID" type="Int" nullable="true" />
+  <col name="LabelName" type="NVarChar(50)" />
+  <col name="PrinterID" type="Int" nullable="true" />
+  <col name="PrinterName" type="NVarChar(50)" />
+  <col name="SubscriptionKeyID" type="Int" nullable="true" />
+  <col name="SubscriptionKey" type="NVarChar(32)" nullable="true" />
+  <col name="CreatedDateTime" type="DateTime" nullable="true" />
+  <col name="CreatedByID" type="UniqueIdentifier" nullable="true" />
+  <col name="CreatedByScreenID" type="Char(8)" nullable="true" />
+  <col name="LastModifiedDateTime" type="DateTime" nullable="true" />
+  <col name="LastModifiedByID" type="UniqueIdentifier" nullable="true" />
+  <col name="LastModifiedByScreenID" type="Char(8)" nullable="true" />
+  <col name="tstamp" type="Timestamp" />
+  <col name="NoteID" type="UniqueIdentifier" nullable="true" />
+  <index name="IX_NLClassLabelPref" unique="true">
+    <col name="CustomerClassID" />
+  </index>
+  <index name="PK_NLClassLabelPref" clustered="true" primary="true" unique="true">
+    <col name="CustomerClassID" />
+  </index>
+</table>]]></CDATA>
+</Sql>

@@ -1,0 +1,31 @@
+﻿<Sql TableName="NLLabelAttribute" TableSchemaXml="#CDATA">
+    <CDATA name="TableSchemaXml"><![CDATA[<table name="NLLabelAttribute">
+  <col name="AttributeID" type="Int" identity="true" />
+  <col name="LabelID" type="Int" nullable="true" />
+  <col name="LabelName" type="NVarChar(50)" nullable="true" />
+  <col name="NLAttributeName" type="NVarChar(50)" nullable="true" />
+  <col name="AcuAttributeName" type="NVarChar(50)" nullable="true" />
+  <col name="Description" type="NVarChar(50)" nullable="true" />
+  <col name="DefaultValue" type="NVarChar(10)" nullable="true" />
+  <col name="Format" type="NVarChar(10)" nullable="true" />
+  <col name="IsPrompted" type="Bit" nullable="true" />
+  <col name="PromptText" type="NVarChar(10)" nullable="true" />
+  <col name="CurrentValue" type="NVarChar(10)" nullable="true" />
+  <col name="IncrementType" type="NVarChar(10)" nullable="true" />
+  <col name="IncrementStep" type="Int" nullable="true" />
+  <col name="IncrementCount" type="Int" nullable="true" />
+  <col name="Length" type="NVarChar(10)" nullable="true" />
+  <col name="IsPickListEnabled" type="Bit" nullable="true" />
+  <col name="CreatedDateTime" type="DateTime" nullable="true" />
+  <col name="CreatedByID" type="UniqueIdentifier" nullable="true" />
+  <col name="CreatedByScreenID" type="Char(8)" nullable="true" />
+  <col name="LastModifiedDateTime" type="DateTime" nullable="true" />
+  <col name="LastModifiedByID" type="UniqueIdentifier" nullable="true" />
+  <col name="LastModifiedByScreenID" type="Char(8)" nullable="true" />
+  <col name="tstamp" type="Timestamp" />
+  <col name="NoteID" type="UniqueIdentifier" nullable="true" />
+  <index name="PK_NLLabelAttributes" clustered="true" primary="true" unique="true">
+    <col name="AttributeID" />
+  </index>
+</table>]]></CDATA>
+</Sql>

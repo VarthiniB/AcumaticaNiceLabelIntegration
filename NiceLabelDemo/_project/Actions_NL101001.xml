@@ -1,0 +1,11 @@
+﻿<Actions ScreenID="NL101001">
+    <Action IsActive="True" ActionName="AddSubscriptionKey" ActionType="G" DisplayName="Add Subscription Key" Form="AddSubKey" IsTopLevel="True" WindowMode="S" IsLockedOnToolbar="False" Connotation="None">
+        <StateActionFields>
+            <StateActionField IsActive="True" FieldName="SubscriptionKey" ActionName="AddSubscriptionKey" IsFromScheme="False" Value="[AddSubKey.SubscriptionKey]" StateActionFieldLineNbr="1" />
+        </StateActionFields>
+        <StateActionParams />
+    </Action>
+    <Category IsActive="True" DisplayName="Actions" CategoryName="Action" LineNbr="0" />
+    <Category IsActive="True" DisplayName="Inquiries" CategoryName="Inquiry" LineNbr="1" />
+    <Category IsActive="True" DisplayName="Reports" CategoryName="Report" LineNbr="2" />
+</Actions>
