@@ -15,8 +15,11 @@ namespace NiceLabelDemo
    
     public PXCancel<NLSyncPref> Cancel;
     public PXProcessing<NLSyncPref> SyncPrefs;
-     
-     protected virtual IEnumerable syncPrefs()
+
+        public PXSetup<NLSubscriptionKey> AutoNumSetup;
+        public string Subkey;
+
+        protected virtual IEnumerable syncPrefs()
     {
       PXResultset<NLSyncPref> res = new PXResultset<NLSyncPref>();
 
@@ -33,19 +36,23 @@ namespace NiceLabelDemo
     }
      public NLSyncProcess()
      {            
-           SyncPrefs.SetProcessDelegate(AssignOrders);           
-     }
+           SyncPrefs.SetProcessDelegate(AssignOrders);
+            string subkey = AutoNumSetup.Current.SubscriptionKey;
+        }
+
+          
 
         public static void AssignOrders(List<NLSyncPref> orders)
         {
             NLSyncProcess labgraph = PXGraph.CreateInstance<NLSyncProcess>();
-           
-            NLSubscriptionKey skey = PXSelect<NLSubscriptionKey,
-                Where<NLSubscriptionKey.createdByID, Equal<Required<NLSubscriptionKey.createdByID>>>,
-                OrderBy<Desc<NLSubscriptionKey.lastModifiedDateTime>>>.SelectWindowed(labgraph, 0, 1, labgraph.Accessinfo.UserID);
+          
+           string subkey = labgraph.AutoNumSetup.Current.SubscriptionKey;
+            /* NLSubscriptionKey skey = PXSelect<NLSubscriptionKey,
+                 Where<NLSubscriptionKey.createdByID, Equal<Required<NLSubscriptionKey.createdByID>>>,
+                 OrderBy<Desc<NLSubscriptionKey.lastModifiedDateTime>>>.SelectWindowed(labgraph, 0, 1, labgraph.Accessinfo.UserID);
 
-            var subKey = skey.SubscriptionKey;
 
+             var subkey = skey.SubscriptionKey;*/
             foreach (NLSyncPref order in orders)
             {
                 try
@@ -53,10 +60,10 @@ namespace NiceLabelDemo
                     switch (order.Description)
                     {
                         case "Printers":
-                            String x = NLWebCalls.CreateRequestPrinters("https://labelcloudapi.onnicelabel.com/Trigger/v1/CloudTrigger/Api-CloudIntegrationDemo-Printers", subKey);
+                            var x = NLWebCalls.CreateRequestPrinters("https://labelcloudapi.onnicelabel.com/Trigger/v1/CloudTrigger/Api-CloudIntegrationDemo-Printers", subkey);
                             break;
                         case "Labels":
-                            String y = NLWebCalls.CreateRequestLabels("https://labelcloudapi.onnicelabel.com/Trigger/v1/CloudTrigger/Api-CloudIntegrationDemo-LabelCatalog", subKey);
+                            String y = NLWebCalls.CreateRequestLabels("https://labelcloudapi.onnicelabel.com/Trigger/v1/CloudTrigger/Api-CloudIntegrationDemo-LabelCatalog", subkey);
                             break;
                         case "Label variables":
                             //   String z = NLWebCalls.CreateRequestVar("https://labelcloudapi.onnicelabel.com/Trigger/v1/CloudTrigger/Api-CloudIntegrationDemo-Variables", subKey);

@@ -18,9 +18,11 @@ using PX.Objects.CR;
 namespace NiceLabelDemo
 {
  
-  [PXCacheName("NLSubscriptionKey")]
-  public class NLSubscriptionKey : IBqlTable
-  {
+
+    [PXCacheName("NiceLabel Add Subscription Key")]
+    [PXPrimaryGraph(typeof(NLSetupMaint))]
+    public class NLSubscriptionKey : IBqlTable
+    {
     
     public class PK : PrimaryKeyOf<NLSubscriptionKey>.By<keyid>
     {
@@ -37,7 +39,7 @@ namespace NiceLabelDemo
 
     #region SubscriptionKey
     [PXDBString(32, IsUnicode = true, InputMask = "")]
-    [PXUIField(DisplayName = "Subscription Key")]
+    [PXUIField(DisplayName = "Subscription Key" , Required = true)]
     public virtual string SubscriptionKey { get; set; }
     public abstract class subscriptionKey : PX.Data.BQL.BqlString.Field<subscriptionKey> { }
     #endregion

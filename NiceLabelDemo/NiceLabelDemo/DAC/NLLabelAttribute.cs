@@ -4,8 +4,8 @@ using PX.Data;
 namespace NiceLabelDemo
 {
   [Serializable]
-  [PXCacheName("NLLabelAttributes")]
-  public class NLLabelAttributes : IBqlTable
+  [PXCacheName("NLLabelAttribute")]
+  public class NLLabelAttribute : IBqlTable
   {
     #region AttributeID
     [PXDBIdentity(IsKey = true)]
