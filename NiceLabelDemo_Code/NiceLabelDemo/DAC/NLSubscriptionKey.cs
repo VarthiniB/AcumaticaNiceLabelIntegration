@@ -39,6 +39,7 @@ namespace NiceLabelDemo
 
     #region SubscriptionKey
     [PXDBString(32, IsUnicode = true, InputMask = "")]
+    [PXDefault]
     [PXUIField(DisplayName = "Subscription Key" , Required = true)]
     public virtual string SubscriptionKey { get; set; }
     public abstract class subscriptionKey : PX.Data.BQL.BqlString.Field<subscriptionKey> { }

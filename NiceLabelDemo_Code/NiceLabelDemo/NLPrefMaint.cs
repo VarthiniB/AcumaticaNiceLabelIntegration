@@ -10,13 +10,13 @@ namespace NiceLabelDemo
     public PXSave<NLClassLabelPref> Save;
     public PXCancel<NLClassLabelPref> Cancel;
 
-        public PXSetup<NLSubscriptionKey> AutoNumSetup;
+        public PXSetup<NLSubscriptionKey> SubSetup;
 
         public SelectFrom<NLClassLabelPref>.View ClassLabelPref;
 
         public NLPrefMaint()
         {
-            NLSubscriptionKey setup = AutoNumSetup.Current;
+            NLSubscriptionKey setup = SubSetup.Current;
           //  Subkey = setup.SubscriptionKey;
         }
 
