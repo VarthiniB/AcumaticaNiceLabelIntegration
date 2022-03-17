@@ -11,7 +11,7 @@ namespace PX.Objects.SO
     // Acuminator disable once PX1016 ExtensionDoesNotDeclareIsActiveMethod extension should be constantly active
     public class NLSOShipmentEntry_Extension : PXGraphExtension<SOShipmentEntry>
   {
-
+        public PXSetup<NLSubscriptionKey> SubSetup;
         #region Event Handlers
 
         public PXAction<PX.Objects.SO.SOShipment> PrintNiceLabel;
@@ -25,11 +25,7 @@ namespace PX.Objects.SO
          
             NLClassLabelPref lab = PXSelect<NLClassLabelPref, Where<NLClassLabelPref.customerClassID, Equal<Required<NLClassLabelPref.customerClassID>>>>.Select(Base, Base.customer.Current.CustomerClassID);
 
-            /*   NLSubscriptionKey skey = PXSelect<NLSubscriptionKey,
-                   Where<NLSubscriptionKey.createdByID, Equal<Required<NLSubscriptionKey.createdByID>>>,
-                   OrderBy<Desc<NLSubscriptionKey.lastModifiedDateTime>>>.SelectWindowed(Base, 0, 1, Base.Accessinfo.UserID);*/
-            var graph = PXGraph.CreateInstance<NLPrefMaint>();
-            string subkey = graph.AutoNumSetup.Current.SubscriptionKey;
+            string subkey = SubSetup.Current.SubscriptionKey;
 
             var x = NLWebCalls.CreateRequestFromShipment("https://labelcloudapi.onnicelabel.com/Trigger/v1/CloudTrigger/Api-CloudIntegrationDemo-Print", cclass, Base.Shipping_Contact.Current.DisplayName +","+ Base.Shipping_Address.Current.AddressLine1 + "," + Base.Shipping_Address.Current.AddressLine2 + "," + Base.Shipping_Address.Current.AddressLine3, lab.LabelID.ToString(), subkey);
             var y = "Label is sent to printer";

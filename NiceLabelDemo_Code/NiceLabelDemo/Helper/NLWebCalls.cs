@@ -10,7 +10,7 @@ using PX.Data;
 
 namespace NiceLabelDemo.Helper
 {
-    class NLWebCalls
+    public static class NLWebCalls
     {
 
         public static String CreateRequestFromShipment(string url, string cclass, string add, string labelid, string key)

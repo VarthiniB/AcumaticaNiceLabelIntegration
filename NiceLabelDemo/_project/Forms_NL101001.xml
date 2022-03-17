@@ -1,5 +1,0 @@
-﻿<Forms ScreenID="NL101001">
-    <Form IsActive="True" FormName="AddSubKey" DisplayName="Add Subscription Key" Columns="1" LineNbr="1">
-        <Field IsActive="True" FieldName="SubscriptionKey" DefaultValue="06bd55b255ea4c0fb7707cba155c5d41" DisplayName="Subscription Key" ControlSize="XM" SchemaField="NiceLabelDemo1.NLClassLabelPref.SubscriptionKey" ColumnSpan="32" FromScheme="True" LineNumber="1" />
-    </Form>
-</Forms>

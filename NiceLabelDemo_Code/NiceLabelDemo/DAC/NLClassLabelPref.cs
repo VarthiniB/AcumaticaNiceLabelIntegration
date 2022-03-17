@@ -6,7 +6,7 @@ using PX.Data.BQL.Fluent;
 namespace NiceLabelDemo
 {
 
-  [PXCacheName("NLClassLabelPref")]
+  [PXCacheName("Nice Label Preferences")]
   public class NLClassLabelPref : IBqlTable
   {
     #region ClassLabelID

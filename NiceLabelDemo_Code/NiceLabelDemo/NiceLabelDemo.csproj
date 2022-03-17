@@ -69,7 +69,6 @@
     <Compile Include="NLPrefMaint.cs" />
     <Compile Include="NLPrinterGraph.cs" />
     <Compile Include="DAC\NLPrinter.cs" />
-    <Compile Include="NLSubKeyMaint.cs" />
     <Compile Include="DAC\NLSubscriptionKey.cs" />
     <Compile Include="DAC\NLSyncPref.cs" />
     <Compile Include="NLSyncProcess.cs" />
