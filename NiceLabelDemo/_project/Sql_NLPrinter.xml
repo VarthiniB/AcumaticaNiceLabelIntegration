@@ -1,5 +1,6 @@
 ﻿<Sql TableName="NLPrinter" TableSchemaXml="#CDATA">
     <CDATA name="TableSchemaXml"><![CDATA[<table name="NLPrinter">
+  <col name="CompanyID" type="Int" default="Zero" />
   <col name="PrinterID" type="Int" identity="true" />
   <col name="PrinterName" type="NVarChar(50)" />
   <col name="DriverName" type="NVarChar(50)" nullable="true" />

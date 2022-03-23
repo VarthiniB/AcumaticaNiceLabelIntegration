@@ -1,5 +1,6 @@
 ﻿<Sql TableName="NLSubscriptionKey" TableSchemaXml="#CDATA">
     <CDATA name="TableSchemaXml"><![CDATA[<table name="NLSubscriptionKey">
+  <col name="CompanyID" type="Int" default="Zero" />
   <col name="KeyID" type="Int" identity="true" />
   <col name="SubscriptionKey" type="NVarChar(32)" default="Zero" />
   <col name="CreatedDateTime" type="DateTime" nullable="true" />
