@@ -1,5 +1,6 @@
 ﻿<Sql TableName="NLLabelAttribute" TableSchemaXml="#CDATA">
     <CDATA name="TableSchemaXml"><![CDATA[<table name="NLLabelAttribute">
+  <col name="CompanyID" type="Int" default="Zero" />
   <col name="AttributeID" type="Int" identity="true" />
   <col name="LabelID" type="Int" nullable="true" />
   <col name="LabelName" type="NVarChar(50)" nullable="true" />
