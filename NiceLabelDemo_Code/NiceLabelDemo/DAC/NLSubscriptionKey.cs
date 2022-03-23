@@ -19,24 +19,18 @@ namespace NiceLabelDemo
 {
  
 
-    [PXCacheName("NiceLabel Add Subscription Key")]
+    [PXCacheName("NiceLabel Subscription Key")]
     [PXPrimaryGraph(typeof(NLSetupMaint))]
     public class NLSubscriptionKey : IBqlTable
     {
     
-    public class PK : PrimaryKeyOf<NLSubscriptionKey>.By<keyid>
+    public class PK : PrimaryKeyOf<NLSubscriptionKey>.By<subscriptionKey>
     {
-      public static NLSubscriptionKey Find(PXGraph graph, int? keyid) => FindBy(graph, keyid);
+      public static NLSubscriptionKey Find(PXGraph graph, string subscriptionKey) => FindBy(graph, subscriptionKey);
     
     }
     
     
-    #region Keyid
-    [PXDBIdentity(IsKey = true)]
-    public virtual int? Keyid { get; set; }
-    public abstract class keyid : PX.Data.BQL.BqlInt.Field<keyid> { }
-    #endregion
-
     #region SubscriptionKey
     [PXDBString(32, IsUnicode = true, InputMask = "")]
     [PXDefault]
