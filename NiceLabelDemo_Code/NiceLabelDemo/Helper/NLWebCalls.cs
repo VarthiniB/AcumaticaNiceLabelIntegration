@@ -13,7 +13,7 @@ namespace NiceLabelDemo.Helper
     public static class NLWebCalls
     {
 
-        public static String CreateRequestFromShipment(string url, string cclass, string add, string labelid, string key)
+        public static void CreateRequestFromShipment(string url, string customerclass, string customerDisplayName, string addressLine1,string addressLine2, string addressLine3, string labelid, string key)
         {
 
             if (Uri.IsWellFormedUriString(url, UriKind.Absolute))
@@ -23,7 +23,7 @@ namespace NiceLabelDemo.Helper
                 req.Method = "POST";
                 string postData = "";
 
-                postData = "{    \"FilePath\": \"" + labelid + "\",    \"FileVersion\": \"\",   \"Quantity\": \"1\",  \"Printer\": \"ZEBRA 105SL 203DPI-VAR\", \"PrinterSettings\": \"\",  \"Variables\": [   {   \"address\": \"" + add + "\" }  ]};";
+                postData = "{    \"FilePath\": \"" + labelid + "\",    \"FileVersion\": \"\",   \"Quantity\": \"1\",  \"Printer\": \"ZEBRA 105SL 203DPI-VAR\", \"PrinterSettings\": \"\",  \"Variables\": [   {   \"address\": \"" + customerDisplayName+", "+addressLine1+", " + addressLine2+", "+addressLine3+ "\" }  ]};";
 
                 byte[] byteArray = Encoding.UTF8.GetBytes(postData);
 
@@ -56,15 +56,15 @@ namespace NiceLabelDemo.Helper
                 // Close the response.
                 response.Close();
 
-                return ((HttpWebResponse)response).StatusDescription;
+               
             }
             else
             {
-                throw (new ArgumentException("Invalid URL provided.", "url"));
+                throw (new ArgumentException("Error Printing Label. Please check URL", url));
             }
         }
 
-        public static String CreateRequestPrinters(string url, string key)
+        public static void CreateRequestPrinters(string url, string key)
         {
             if (Uri.IsWellFormedUriString(url, UriKind.Absolute))
             {
@@ -119,18 +119,16 @@ namespace NiceLabelDemo.Helper
                     // Close the response.
                     response.Close();
 
-                    return ((HttpWebResponse)response).StatusDescription;
-
                 }
             }
             else
             {
-                throw (new ArgumentException("Invalid URL provided.", "url"));
+                throw (new ArgumentException("Unable to load all printers. Please check and retry", "url"));
             }
         }
 
 
-        public static String CreateRequestLabels(string url, string key)
+        public static void CreateRequestLabels(string url, string key)
         {
             if (Uri.IsWellFormedUriString(url, UriKind.Absolute))
             {
@@ -182,14 +180,11 @@ namespace NiceLabelDemo.Helper
 
                     // Close the response.
                     response.Close();
-
-                    return ((HttpWebResponse)response).StatusDescription;
-
                 }
             }
             else
             {
-                throw (new ArgumentException("Invalid URL provided.", "url"));
+                throw (new ArgumentException("Unable to load all labels. Please check and retry", "url"));
             }
         }
 
