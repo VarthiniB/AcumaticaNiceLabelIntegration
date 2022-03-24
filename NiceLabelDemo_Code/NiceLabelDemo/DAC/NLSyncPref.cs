@@ -7,7 +7,6 @@ namespace NiceLabelDemo
   [PXHidden]
   public class NLSyncPref : IBqlTable
   {
-
 		public abstract class description : PX.Data.BQL.BqlString.Field<description> { }
 		[PXString(50, IsUnicode = true, IsKey = true)]
 		[PXUIField(DisplayName = "Description")]
