@@ -5,6 +5,8 @@ using System.Text;
 using PX.Data;
 using NiceLabelDemo;
 using NiceLabelDemo.Helper;
+using System.Collections.Generic;
+using System.Collections;
 
 namespace PX.Objects.SO
 {
@@ -18,20 +20,23 @@ namespace PX.Objects.SO
   
     [PXButton(CommitChanges = true)]
     [PXUIField(DisplayName = "Print NiceLabel")]
-    protected void printNiceLabel()
+    public IEnumerable printNiceLabel(PXAdapter adapter)
     {
             var customer = Base.customer;
-            var cclass = customer.Current.CustomerClassID;
-         
+            var customerclass = customer.Current.CustomerClassID;
+            
             NLClassLabelPref lab = PXSelect<NLClassLabelPref, Where<NLClassLabelPref.customerClassID, Equal<Required<NLClassLabelPref.customerClassID>>>>.Select(Base, Base.customer.Current.CustomerClassID);
 
             string subkey = SubSetup.Current.SubscriptionKey;
 
-            var x = NLWebCalls.CreateRequestFromShipment("https://labelcloudapi.onnicelabel.com/Trigger/v1/CloudTrigger/Api-CloudIntegrationDemo-Print", cclass, Base.Shipping_Contact.Current.DisplayName +","+ Base.Shipping_Address.Current.AddressLine1 + "," + Base.Shipping_Address.Current.AddressLine2 + "," + Base.Shipping_Address.Current.AddressLine3, lab.LabelID.ToString(), subkey);
-            var y = "Label is sent to printer";
-            throw new PXException(y);
+            PXLongOperation.StartOperation(Base, delegate ()
+			{
+                NLWebCalls.CreateRequestFromShipment("https://labelcloudapi.onnicelabel.com/Trigger/v1/CloudTrigger/Api-CloudIntegrationDemo-Print", customerclass, Base.Shipping_Contact.Current.DisplayName, Base.Shipping_Address.Current.AddressLine1, Base.Shipping_Address.Current.AddressLine2, Base.Shipping_Address.Current.AddressLine3, lab.LabelID.ToString(), subkey);
+            });  
 
-    }
+            return adapter.Get();
+
+        }
 
         #endregion
 
