@@ -13,9 +13,9 @@ namespace NiceLabelDemo.Helper
     public static class NLWebCalls
     {
 
-        public static void CreateRequestFromShipment(string url, string customerclass, string customerDisplayName, string addressLine1,string addressLine2, string addressLine3, string labelid, string key)
+        public static void CreateRequestFromShipment( string customerclass, string customerDisplayName, string addressLine1,string addressLine2, string addressLine3, string labelid, string key)
         {
-
+            string url = "https://labelcloudapi.onnicelabel.com/Trigger/v1/CloudTrigger/Api-CloudIntegrationDemo-Print";
             if (Uri.IsWellFormedUriString(url, UriKind.Absolute))
             {
                 WebRequest req = WebRequest.Create(url);
@@ -64,8 +64,10 @@ namespace NiceLabelDemo.Helper
             }
         }
 
-        public static void CreateRequestPrinters(string url, string key)
+        public static void CreateRequestPrinters(string key)
         {
+
+            string url = "https://labelcloudapi.onnicelabel.com/Trigger/v1/CloudTrigger/Api-CloudIntegrationDemo-Printers";
             if (Uri.IsWellFormedUriString(url, UriKind.Absolute))
             {
                 WebRequest req = WebRequest.Create(url);
@@ -127,9 +129,10 @@ namespace NiceLabelDemo.Helper
             }
         }
 
-
-        public static void CreateRequestLabels(string url, string key)
+            
+        public static void CreateRequestLabels(string key)
         {
+            string url = "https://labelcloudapi.onnicelabel.com/Trigger/v1/CloudTrigger/Api-CloudIntegrationDemo-LabelCatalog";
             if (Uri.IsWellFormedUriString(url, UriKind.Absolute))
             {
                 WebRequest req = WebRequest.Create(url);

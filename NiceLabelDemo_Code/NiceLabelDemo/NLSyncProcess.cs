@@ -53,10 +53,10 @@ namespace NiceLabelDemo
                     switch (order.Description)
                     {
                         case "Printers":
-                            NLWebCalls.CreateRequestPrinters("https://labelcloudapi.onnicelabel.com/Trigger/v1/CloudTrigger/Api-CloudIntegrationDemo-Printers", subkey);
+                            NLWebCalls.CreateRequestPrinters( subkey);
                             break;
                         case "Labels":
-                            NLWebCalls.CreateRequestLabels("https://labelcloudapi.onnicelabel.com/Trigger/v1/CloudTrigger/Api-CloudIntegrationDemo-LabelCatalog", subkey);
+                            NLWebCalls.CreateRequestLabels(subkey);
                             break;
                         case "Label variables":
                             // NLWebCalls.CreateRequestVar("https://labelcloudapi.onnicelabel.com/Trigger/v1/CloudTrigger/Api-CloudIntegrationDemo-Variables", subKey);

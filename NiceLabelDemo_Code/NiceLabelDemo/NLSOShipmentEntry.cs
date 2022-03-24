@@ -31,7 +31,7 @@ namespace PX.Objects.SO
 
             PXLongOperation.StartOperation(Base, delegate ()
 			{
-                NLWebCalls.CreateRequestFromShipment("https://labelcloudapi.onnicelabel.com/Trigger/v1/CloudTrigger/Api-CloudIntegrationDemo-Print", customerclass, Base.Shipping_Contact.Current.DisplayName, Base.Shipping_Address.Current.AddressLine1, Base.Shipping_Address.Current.AddressLine2, Base.Shipping_Address.Current.AddressLine3, lab.LabelID.ToString(), subkey);
+                NLWebCalls.CreateRequestFromShipment(customerclass, Base.Shipping_Contact.Current.DisplayName, Base.Shipping_Address.Current.AddressLine1, Base.Shipping_Address.Current.AddressLine2, Base.Shipping_Address.Current.AddressLine3, lab.LabelID.ToString(), subkey);
             });  
 
             return adapter.Get();
