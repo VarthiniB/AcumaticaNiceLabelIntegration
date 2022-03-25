@@ -26,7 +26,7 @@ Steps to publish the customization.
 ![image](https://user-images.githubusercontent.com/13830240/160199361-391e2f1e-b784-412b-a4e9-3fa74205fa8f.png)
 
 
---> Use the NiceLabel Add Subscription Key, to add the subscription key from NiceLabel
+--> Use the NiceLabel Add Subscription Key screen , to add the subscription key from NiceLabel
 
 
 --> Use the NiceLabel Preferences screen to Map the Customer Class from Acumatica with a Label and Printer from NiceLabel
@@ -37,7 +37,7 @@ Steps to publish the customization.
 
 --> Prior to this, please do subscribe to Nice label
 
-    *get a subscription key and the cloud account. You can check by opening the nice label control centers.
+    *Get a subscription key and the cloud account. You can check by opening the nice label control centers.
     
     
     *Create the demo labels in NiceLabel Designer and save the save to the cloud account. You can find the label on the control center
