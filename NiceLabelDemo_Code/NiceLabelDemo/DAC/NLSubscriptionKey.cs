@@ -23,14 +23,7 @@ namespace NiceLabelDemo
     [PXPrimaryGraph(typeof(NLSetupMaint))]
     public class NLSubscriptionKey : IBqlTable
     {
-    
-    public class PK : PrimaryKeyOf<NLSubscriptionKey>.By<subscriptionKey>
-    {
-      public static NLSubscriptionKey Find(PXGraph graph, string subscriptionKey) => FindBy(graph, subscriptionKey);
-    
-    }
-    
-    
+       
     #region SubscriptionKey
     [PXDBString(32, IsUnicode = true, InputMask = "")]
     [PXDefault]
