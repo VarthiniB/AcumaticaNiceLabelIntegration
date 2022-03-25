@@ -17,6 +17,7 @@
   <col name="NoteID" type="UniqueIdentifier" nullable="true" />
   <index name="PK_NLClassLabelPref" clustered="true" primary="true" unique="true">
     <col name="CustomerClassID" />
+    <col name="CompanyID" />
   </index>
 </table>]]></CDATA>
 </Sql>
