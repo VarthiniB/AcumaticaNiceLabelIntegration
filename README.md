@@ -37,25 +37,24 @@ Steps to publish the customization.
 
 --> Prior to this, please do subscribe to Nice label
 
-    >>Get a subscription key and the cloud account. You can check by opening the nice label control centers.
-    
-    
-    >>Create the demo labels in NiceLabel Designer and save the save to the cloud account. You can find the label on the control center
-    
-    
-    >>Launch NiceLabelAutomation Manager and get the custom url (sample ones are given below) for the following to get 
-    
-    
-          --> List of Labels : "https://labelcloudapi.onnicelabel.com/Trigger/v1/CloudTrigger/Api-CloudIntegrationDemo-LabelCatalog"
-          
-          --> List of printers: "https://labelcloudapi.onnicelabel.com/Trigger/v1/CloudTrigger/Api-CloudIntegrationDemo-Printers"
-          
-          --> To print: "https://labelcloudapi.onnicelabel.com/Trigger/v1/CloudTrigger/Api-CloudIntegrationDemo-Print" (with the label ID from the NiceLabel Designer)
-          
-          --> Please use the documentation from NiceLabel for more details(https://help.nicelabel.com/hc/en-001/articles/4408433528337-Getting-started-with-NiceLabel-Cloud) 
-          
-    >>Replace the URLs in the ..\NiceLabelDemo_Code\NiceLabelDemo\Helper\NLWebCalls.cs file
-    
+i) Get a subscription key and the cloud account. You can check by opening the nice label control centers.
+
+
+II) Create the demo labels in NiceLabel Designer and save the save to the cloud account. You can find the label on the control center
+
+
+III) Launch NiceLabelAutomation Manager and get the custom url (sample ones are given below) for the following to get 
+
+
+         List of Labels : "https://labelcloudapi.onnicelabel.com/Trigger/v1/CloudTrigger/Api-CloudIntegrationDemo-LabelCatalog"
+
+         List of printers: "https://labelcloudapi.onnicelabel.com/Trigger/v1/CloudTrigger/Api-CloudIntegrationDemo-Printers"
+
+         To print: "https://labelcloudapi.onnicelabel.com/Trigger/v1/CloudTrigger/Api-CloudIntegrationDemo-Print" (with the label ID from the NiceLabel Designer)
+
+         Please use the documentation from NiceLabel for more details(https://help.nicelabel.com/hc/en-001/articles/4408433528337-Getting-started-with-NiceLabel-Cloud) 
+IV) Replace the URLs in the ..\NiceLabelDemo_Code\NiceLabelDemo\Helper\NLWebCalls.cs file
+
     
     
 -->Compile the NiceLabelDemo_Code project with the changed URL and publish the customization project with the updated NiceLabelDemo.dll, to utilize the labels created.
