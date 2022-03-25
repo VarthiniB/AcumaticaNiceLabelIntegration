@@ -2,7 +2,7 @@
 
 This project contains source code and the Project for showcasing the NiceLabel integration with Acumatica
 
-The file can be utilized as any other Acumatica Customization Project and can published.
+The file can be utilized as a Acumatica Customization Project steps to publish are below.
 
 Steps to publish the customization.
 
