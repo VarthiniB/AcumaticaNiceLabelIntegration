@@ -3,8 +3,8 @@
   <col name="CompanyID" type="Int" default="Zero" />
   <col name="ClassLabelID" type="Int" identity="true" />
   <col name="CustomerClassID" type="NVarChar(10)" />
-  <col name="LabelID" type="Int" nullable="true" />
-  <col name="LabelName" type="NVarChar(50)" />
+  <col name="LabelID" type="Int" />
+  <col name="LabelName" type="NVarChar(50)" nullable="true" />
   <col name="PrinterID" type="Int" nullable="true" />
   <col name="PrinterName" type="NVarChar(50)" />
   <col name="CreatedDateTime" type="DateTime" nullable="true" />
