@@ -5,7 +5,7 @@ This project contains source code and the Project for showcasing the NiceLabel i
 The file can be utilized as a Acumatica Customization Project steps to publish are below.
 
 Steps to publish the customization.
-1. Build the code in the NiceLabelDemo_Code with the build path pointing to the cloned NiceLabelDemo folder as shown below. The build configuration can be found by righting clicking on the project and then clicking on the properties option 
+1. Build the code in the NiceLabelDemo_Code with the build output path pointing to the cloned NiceLabelDemo folder as shown below. The build configuration can be found by righting clicking on the project and then clicking on the properties option 
 ![image](https://user-images.githubusercontent.com/13830240/160849043-7e22e245-4222-4f45-a65e-9e111b814299.png)
 
 
